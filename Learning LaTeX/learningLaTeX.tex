@@ -1,0 +1,251 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb, amsfonts} % Math symbols and operations
+\usepackage{float}                      % Floating charts and images
+\usepackage{enumerate}                  % Enumerated lists add-ons
+\usepackage{ulem}                       % Underline functionalities
+\usepackage{textcase}                   % Text cases functions
+\usepackage{hyperref}                   % Hyperlinks
+
+\title{Learning \LaTeX}
+\author{Eugenio J. Wu}
+\date{\today}
+
+\pagestyle{empty}  % Turns off page numbers
+\hbadness=10001    % Turns off \hbadness warnings
+\parindent 0in     % Sets default paragraph indentation to 0
+
+
+\begin{document}
+
+
+\maketitle 
+\begin{abstract}
+    \noindent 
+    Hello! This is my first \LaTeX\, document. \\[5pt]
+    A retangle has side lengths of $(x + 1)$ and $(x + 3)$. The equation ${  A(x) = x^2 + 4x + 3  }$ gives the area of the rectangle. \\[5pt]    
+\end{abstract} \pagebreak
+
+
+\tableofcontents \pagebreak
+
+
+\section{Math Expressions}
+\subsection{Common Mathematical Notations}
+
+Superscripts: \\[5pt]
+$${  2x^2  }$$
+$${  2x^n  }$$
+$${  69x^{420}  }$$ \\[5pt]
+
+Subscripts: \\[5pt]
+$${  \pi_1  }$$
+$${  f(1) = 0  }$$
+$${  x_1 = 100  }$$ \\[5pt]
+
+Trigonometric Functions: \\[5pt]
+$${  \sin x' = \cos x  }$$
+$${  \cos x' = -\sin x  }$$
+$${  \tan ^2x = \sec ^2x - 1  }$$ \\[5pt]
+
+Logarithmic Functions: \\[5pt]
+$${  \log _b x = n  }$$
+$${  \ln x' = \frac{1}{x}  }$$
+$${  \int \frac{1}{x} = \ln x + C}$$ \\[5pt]
+
+Roots: \\[5pt]
+$${  \sqrt{4} = 2  }$$
+$${  \sqrt[3]{27} = 3  }$$
+$${  \sqrt[3]{x^2} = x^\frac{2}{3}  }$$
+$${  \sqrt{  \sqrt[3]{x}  }  }$$
+
+Fractions: \\[5pt]
+About ${  \frac{2}{3}  }$ of the cup is full. \\[5pt]
+About ${  \displaystyle \frac{2}{3}  }$ of the cup is full.
+$${  \frac{1}{100}  }$$ \\[5pt]
+
+
+\subsection{Brackets, Tables, and Arrays}
+
+Brackets: \\[5pt]
+(Normal parentheses, no need to escape), [Squared brackets, no need to escape], \{Curly brackets, you do need to escape\}, \textgreater You can type pointy brackets like with \textbackslash textgreater or \textbackslash textless \\[5pt]
+
+Brackets in Math Mode: \\[5pt]
+You can also write brackets in a more math-like aesthetic manner with functions \\[5pt]
+$${ \left( \text{parenthesis} \right)}$$
+$${ \left( \frac{99}{100} \right)}$$
+$${ \left< \text{Dynamic pointy bracket} \right> }$$ \\[5pt]
+
+Tables: \\[5pt]
+\begin{center}
+    \begin{tabular}{|c||c|c|c|}
+        \hline
+        Names & Jamal & Quandus & Luther \\ \hline
+        Fried Chicken & 5 & 8 & 69 \\ \hline
+        Watermelons & 1 & 2 & 5 \\ \hline
+    \end{tabular} \vspace{20pt}
+\end{center} \vspace{10pt}
+
+\begin{table}[H]
+    \centering
+    \def\arraystretch{1.5} % Increasing vertical size of each row
+
+    % Table 1: People and Food
+    \begin{tabular}{|c||c|c|c|}
+        \hline
+        Names & Jamal & Quandus & Luther \\ \hline
+        Fried Chicken & 5 & 8 & 69 \\ \hline
+        Watermelons & 1 & 2 & 5 \\ \hline
+    \end{tabular}
+    \caption{People and Food}
+    \vspace{20pt}
+
+    % Table 2: People, Food, and Descriptions
+    \begin{tabular}{|c||p{1in}|c|c|c|}
+        \hline
+        Names & The names of people participating in this chart & Jamal & Quandus & Luther \\ \hline
+        Fried Chicken & Fried chicken is very tasty & 5 & 8 & 69 \\ \hline
+        Watermelons & Watermelons are very juicy and sweet & 1 & 2 & 5 \\ \hline
+    \end{tabular} 
+    \caption{People, Food, and Descriptions}
+    \vspace{20pt}
+\end{table} \vspace{10pt}
+
+Arrays: \\[5pt]
+\begin{align} % When you use align, you are automatically in math display mode
+    % Use ampersands to align
+    &5x^2 \\
+    &5x^2 \text{ is an equation}
+\end{align}
+\begin{align}
+    5^2&=25 \\
+    500&=500
+\end{align} \vspace{10pt}
+
+
+\section{Lists}
+
+Lists: 
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+        \begin{enumerate}
+            \item Item a
+            \item Item b
+            \begin{enumerate}
+                \item Item i
+            \end{enumerate}
+        \end{enumerate}
+\end{enumerate} \vspace{10pt}
+
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \begin{itemize}
+        \item Item a
+        \item Item b
+        \begin{itemize}
+            \item Item i
+        \end{itemize}
+    \end{itemize}
+\end{itemize} \vspace{10pt}
+
+\begin{enumerate}[A.]
+    \item Item A
+    \item Item B
+\end{enumerate} \vspace{10pt}
+
+\begin{enumerate}[i)]
+    \item Item i
+    \item Item ii
+\end{enumerate} \vspace{10pt}
+
+\begin{enumerate} \setcounter{enumi}{2}
+    \item Item 3
+    \item Item 4
+\end{enumerate} \vspace{10pt}
+
+
+\section{Text Document Formatting}
+\subsection{Text Formatting}
+
+\begin{itemize}
+    \item This will produce \textit{italicized} text.
+    \item This will produce \textbf{boldfaced} text.
+    \item This will produce \emph{emphasized} text. % Smartly formats text to create emphasis, usually, italics are used to emphasize text, however, since I'm using the ulem package here, italics are replaced with underlines
+    \item This will produce \textsc{small caps} text.
+    \item This will produce \texttt{monospace} text. 
+    \item This will produce \MakeTextUppercase{uppercased} text.
+    \item This will produce \MakeTextLowercase{LOWERCASED} text. 
+    \item This will produce \uline{underlined} text. 
+    \item This will produce \uuline{double underlined} text.
+    \item This will produce \uwave{wavy-underlined} text. 
+    \item This will produce \sout{strikethroughed} text. 
+    \item This will produce \xout{hatched} text. 
+    \item This will produce \dashuline{dash-underlined} text.
+    \item This will produce \dotuline{dot-underlined} text. 
+    \item This will produce a full link: \url{https://github.com/aier9500/aierNix}
+    \item This will produce a hyperlink: \href{https://github.com/aier9500/aierNix}{my NixOS configs}.
+\end{itemize} \vspace{10pt}
+
+Different Sized Texts: 
+\begin{itemize}
+    \item The \begin{tiny}quick brown fox\end{tiny} jumps over the lazy dog. % tiny
+    \item The \begin{scriptsize}quick brown fox\end{scriptsize} jumps over the lazy dog. % scriptsize
+    \item The \begin{footnotesize}quick brown fox\end{footnotesize} jumps over the lazy dog. % footnotesize
+    \item The \begin{small}quick brown fox\end{small} jumps over the lazy dog. % small
+    \item The \begin{normalsize}quick brown fox\end{normalsize} jumps over the lazy dog. % normalsize
+    \item The \begin{large}quick brown fox\end{large} jumps over the lazy dog. % large
+    \item The \begin{Large}quick brown fox\end{Large} jumps over the lazy dog. % Large
+    \item The \begin{LARGE}quick brown fox\end{LARGE} jumps over the lazy dog. % LARGE
+    \item The \begin{huge}quick brown fox\end{huge} jumps over the lazy dog. % huge
+    \item The \begin{Huge}quick brown fox\end{Huge} jumps over the lazy dog. % Huge
+\end{itemize} \vspace{10pt}
+
+Line Alignments: 
+\begin{center}
+    This line is centered. 
+\end{center}
+
+\begin{flushleft}
+    This line is flushed left.
+\end{flushleft}
+
+\begin{flushright}
+    This line is flushed right. 
+\end{flushright}
+
+
+\subsection{Document Formatting}
+
+% Normally, sections, subsections, and subsubsections would be numbered so they are more differentiable from paragraphs; but to not mess up the numbering of this document, I am choosing to not number them
+\section*{This is a Section}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \\[5pt]
+
+\subsection*{This is a Subsection}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \\[5pt]
+
+\subsubsection*{This is a SubsubSection}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \\[5pt]
+
+\paragraph*{This is a Paragraph}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \\[5pt]
+
+\subparagraph*{This is a subparagraph}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \\[5pt]
+
+\makebox[\linewidth]{\rule{\paperwidth}{1pt}}
+\textasciicircum above is a pagewidth line \\[5pt]
+\rule{\textwidth}{1pt}
+\textasciicircum above is a textwidth line \\[5pt]
+\begin{center}
+    \rule{3in}{1pt}
+\end{center}
+\textasciicircum above is a 3 inch line \\[5pt]
+\rule{\textwidth}{0.4pt}
+\textasciicircum above is a thin (0.4pt) line \\[5pt]
+\rule{\textwidth}{2pt}
+\textasciicircum above is a thick(2pt) line \\[5pt]
+
+
+\end{document}
