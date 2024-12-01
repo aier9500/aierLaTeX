@@ -1,3 +1,4 @@
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Math Expressions}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Common Mathematical Notations}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Brackets, Tables, and Arrays}{4}{subsection.1.2}%
