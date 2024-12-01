@@ -6,6 +6,7 @@
 \usepackage{ulem}                       % Underline functionalities
 \usepackage{textcase}                   % Text cases functions
 \usepackage{hyperref}                   % Hyperlinks
+\usepackage[english]{babel}             % Grammar check
 
 \title{Learning \LaTeX}
 \author{Eugenio J. Wu}
@@ -22,8 +23,8 @@
 \maketitle 
 \begin{abstract}
     \noindent 
-    Hello! This is my first \LaTeX\, document. \\[5pt]
-    A retangle has side lengths of $(x + 1)$ and $(x + 3)$. The equation ${  A(x) = x^2 + 4x + 3  }$ gives the area of the rectangle. \\[5pt]    
+    Hello! This is my first \LaTeX document. \\[5pt]
+    A rectangle has side lengths of $(x + 1)$ and $(x + 3)$. The equation ${  A(x) = x^2 + 4x + 3  }$ gives the area of the rectangle. \\[5pt]    
 \end{abstract} \pagebreak
 
 
@@ -80,9 +81,9 @@ Tables: \\[5pt]
 \begin{center}
     \begin{tabular}{|c||c|c|c|}
         \hline
-        Names & Jamal & Quandus & Luther \\ \hline
-        Fried Chicken & 5 & 8 & 69 \\ \hline
-        Watermelons & 1 & 2 & 5 \\ \hline
+        Names & Will & Quandus & Luther \\ \hline
+        Ham & 5 & 8 & 69 \\ \hline
+        Cheese & 1 & 2 & 5 \\ \hline
     \end{tabular} \vspace{20pt}
 \end{center} \vspace{10pt}
 
@@ -93,9 +94,9 @@ Tables: \\[5pt]
     % Table 1: People and Food
     \begin{tabular}{|c||c|c|c|}
         \hline
-        Names & Jamal & Quandus & Luther \\ \hline
-        Fried Chicken & 5 & 8 & 69 \\ \hline
-        Watermelons & 1 & 2 & 5 \\ \hline
+        Names & Will & Quandus & Luther \\ \hline
+        Ham & 5 & 8 & 69 \\ \hline
+        Cheese & 1 & 2 & 5 \\ \hline
     \end{tabular}
     \caption{People and Food}
     \vspace{20pt}
@@ -103,9 +104,9 @@ Tables: \\[5pt]
     % Table 2: People, Food, and Descriptions
     \begin{tabular}{|c||p{1in}|c|c|c|}
         \hline
-        Names & The names of people participating in this chart & Jamal & Quandus & Luther \\ \hline
-        Fried Chicken & Fried chicken is very tasty & 5 & 8 & 69 \\ \hline
-        Watermelons & Watermelons are very juicy and sweet & 1 & 2 & 5 \\ \hline
+        Names & The names of people participating in this chart & Will & Quandus & Luther \\ \hline
+        Ham & Ham is very tasty & 5 & 8 & 69 \\ \hline
+        Cheese & Cheese is very cheesy & 1 & 2 & 5 \\ \hline
     \end{tabular} 
     \caption{People, Food, and Descriptions}
     \vspace{20pt}
@@ -184,8 +185,8 @@ Lists:
     \item This will produce \xout{hatched} text. 
     \item This will produce \dashuline{dash-underlined} text.
     \item This will produce \dotuline{dot-underlined} text. 
-    \item This will produce a full link: \url{https://github.com/aier9500/aierNix}
-    \item This will produce a hyperlink: \href{https://github.com/aier9500/aierNix}{my NixOS configs}.
+    \item This will produce a full link: \url{https://github.com/aier9500/aierFedoraNix}
+    \item This will produce a hyperlink: \href{https://github.com/aier9500/aierFedoraNix}{my Home Manager configs}.
 \end{itemize} \vspace{10pt}
 
 Different Sized Texts: 
